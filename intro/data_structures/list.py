@@ -194,12 +194,16 @@ prices = [items[1] for item in items]
 print(prices)
 
 #Filtere
+print("\n******** Working with Filter ********\n")
 filtered = list(map(lambda item:item[1], items))
 print(filtered)
 prices = [items[0] for item in items if item[1] >= 10]
 print(filtered)
 
 # ZIP Function
-# 
+print("\n******** Working with Zip Comprehension ********\n")
+# We use zip to combine two lists into a single list
 
-
+list1 = [1, 3, 5, 7]
+list2 = [2, 4, 6, 8]
+print(list(zip(list1, list2)))
