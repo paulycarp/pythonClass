@@ -3,7 +3,7 @@ print("\n******** Working with List ********\n")
 
 letters = ["a", "b", "c", "d", "e", "f", "g", "h"]
 num = [[1, 4], [2, 8]]
-twos = [2] * 9 # This line will help us to repeat content of a list
+twos = [2] * 5 # This line will help us to repeat content of a list
 
 print(twos, num)
 print(type(num))
@@ -19,25 +19,24 @@ print(list('classified'))
 
 # Lenght
 print("\n******** Lenght of a string ********\n")
-len(alphanum)
+print(len(alphanum))
 
 # Accessing List
 print("\n******** Accessing List item ********\n")
 # We use [] to access list
 
-alphanum[5]
+print(alphanum[5])
 
 # slice
-
 print(alphanum[1:4])
 print(alphanum[::4])
 print(alphanum[1::5])
 
-nums = range(40)
+nums = range(30)
 
 print(list(nums[::2])) # Lists range of numbers in step of 2 (even numbers)
-print(list(nums[::-1])) # Lists range of numbers in step of -1 ()
-print((nums[::-1]))
+print(list(nums[::-1])) # Lists range of numbers in step of -1 (counting from back)
+print((nums[::-1]))# Lists range of numbers in step of -1 (odd numbers) without listing them explicitly
 print((nums[::3])) # Lists range of numbers in step of 2 (even numbers) without listing them explicitly
 
 # unpacking list
@@ -50,13 +49,17 @@ third = number1[2]
 number2 = [1, 2, 3,]
 first, second, third = number2
 
+print(first, third)
+
 number3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-first, second, third, *other = number2
+first, second, third, *others= number3
+
+print(first, second, others)
 
 # Looping
 print("\n******** Working with Loop ********\n")
 for letter in letters:
-    print(letters)
+    print(letter)
 
 for letter in enumerate(letters):
     print(letter)
@@ -66,11 +69,13 @@ for index, letter in enumerate(letters):
 
 # Adding and Removing items into and from a list
 print("\n******** Adding and Removing item from a list ********\n")
+
 letter1 = ["a", "b", "c", "f", "g"]
+
 #Add
-letter1.append("d")
+letter1.append("h") # Adds h at the end of the list
 print(letter1)
-letter1.insert(0, "_")
+letter1.insert(3, "d") # inserting "h" at index 3
 print(letter1)
 
 # Remove
@@ -79,7 +84,7 @@ letter1.pop(1)
 print(letter1)
 
 # When you don't know the index
-# We use
+# We use letters
 letter1.remove("c")
 print(letter1)
 
@@ -93,6 +98,7 @@ print(letter1)
 
 # Finding Items in a list
 # to find index of item
+print("\n******** working with finding item in a list ********\n")
 
 letter2 = ["a", "b", "c", "e", "f", "g", "f"]
 #print(letter2.index("h"))
@@ -101,10 +107,14 @@ print(letter2.index("b"))
 if "d" in letter2:
     print(letter2.index('d'))
 
-# number of occurrence (telling us the number of occurrence of a letter)
+# number of occurrence 
+# telling us the number of occurrence of a letter
+
 print(letter2.count('f'))
 
 # Sorting List
+print("\n******** working with sort ********\n")
+
 num = [3, 1, 7, 0, 2, 8, 5, 9, 6, 4]
 num.sort()
 print(num)
