@@ -128,19 +128,22 @@ print(numSorted)
 
 #Complex Sorting
 items = [
-    ("Produce1", 45),
-    ("Produce2", 15),
+    ("Produce1", 15),
+    ("Produce2", 45),
     ("Produce3", 10),
 ]
 
 items.sort()
 print()
+print(items)
 
 # create a sort function
-def sort_item(item):
-    return item[1]
+def sort_item(items):
+    return items[1]
 
 items.sort(key=sort_item)
+print(items)
+
 items.sort(key=sort_item, reverse=True)
 print(items)
 
@@ -166,6 +169,9 @@ for item in items:
 print(prices)
 
 # Map
+prices = list(map(lambda item:item[0], items))
+print(prices)
+
 prices = list(map(lambda item:item[1], items))
 print(prices)
 
@@ -187,11 +193,17 @@ items = [
 filtered = []
 for item in items:
     if item[1] >= 10:
-        filtered.append(items[0])
-        #filtered.append(items)
+        filtered.append(item[0])
+        #filtered.append(item)
 print(filtered)
 
-filtered = list(filter(lambda item:item[1] >= 10, items))
+filtered = list(filter(lambda item:item[1] >= 11, items))
+print(filtered)
+
+filtered = list(map(lambda item:item[1], items))
+print(filtered)
+
+prices = [items[0] for item in items if item[1] >= 10]
 print(filtered)
 
 # List comprehension
@@ -200,15 +212,9 @@ print("\n******** Working with List Comprehension ********\n")
 # Map
 prices = list(map(lambda item:item[1], items))
 print(prices)
-prices = [items[1] for item in items]
-print(prices)
 
-#Filtere
-print("\n******** Working with Filter ********\n")
-filtered = list(map(lambda item:item[1], items))
-print(filtered)
-prices = [items[0] for item in items if item[1] >= 10]
-print(filtered)
+prices = [item[0] for item in items]
+print(prices)
 
 # ZIP Function
 print("\n******** Working with Zip Comprehension ********\n")
@@ -216,4 +222,5 @@ print("\n******** Working with Zip Comprehension ********\n")
 
 list1 = [1, 3, 5, 7]
 list2 = [2, 4, 6, 8]
+
 print(list(zip(list1, list2)))

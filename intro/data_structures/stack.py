@@ -9,7 +9,6 @@ print("\n******** Working with Shelf ********\n")
 shelf = []
 
 # Add
-
 shelf.append("book1")
 shelf.append("book2")
 shelf.append("book3")
@@ -17,7 +16,7 @@ shelf.append("book3")
 print(Shelf)
 
 #Remove
-borrow = shelf.pop() # book3
+borrow = shelf.pop() # this will remove book3
 print(borrow)
 
 #last item
@@ -46,6 +45,7 @@ def sum(q, r):
     return q + r
 
 print(5, 4)
+
 # Remove Item
 stack.pop()
 def removeItem(anyList):

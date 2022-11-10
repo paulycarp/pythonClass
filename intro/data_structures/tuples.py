@@ -1,9 +1,10 @@
 # Tuples are immutable
 # Readonly list
-from re import A
+#from re import A
 
 
 point = (1, 2)
+print(type(point))
 # if we exclude paranthesis, we still have a tuple
 point = 1, 2
 print(type(point))
@@ -18,12 +19,10 @@ print(point)
 
 # Repeat
 point = (1, 3) * 5
-
 print(point)
 
 
 # Convert list to tuple
-
 point = tuple([1, 2, 3, 4, 5,])
 print(point)
 point = tuple("books")

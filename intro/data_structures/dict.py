@@ -88,7 +88,7 @@ print("list", getsizeof(values0))
 values1 = ( x * 2 for x in range(15000))
 print("gen", getsizeof(values1))
 
-number0
+#number0
 
 val = [*range(5), *"Schools"]
 print(val)
@@ -97,4 +97,15 @@ print(val)
 first = [1, 2]
 second = [3]
 vals = [*first, "a", *second, *"Hello"]
-print(val)
+print(vals)
+
+# Unpack dictionary
+first = {"x": 1}
+second = {"x": 10, "y": 2}
+
+combined = {**first, **second, "z": 1}
+print(combined)
+
+# Given:
+# sentence = "This is a common interview question, you can try it out."
+# find the most repeated character in a text (spaces not included)
