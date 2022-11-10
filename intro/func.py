@@ -1,73 +1,70 @@
 """Functions and Functional Programming"""
 import math
 
+first_name = "DevMan"
+last_name = "Paul"
 
 def fullname(first_name, last_name):
-    """Any Dommy string"""
-    print(f"{first_name} {last_name}")
+      print(f"My name is {first_name} {last_name}")
+
+print(f"My name is {first_name} {last_name}")
 
 # Return a value
 def uppercase(word):
-    """Any Dommy string"""
     return word.upper()
 
 def fizzbuzz():
-    """any Dommy string"""
     print("Fissbuss challenge")
 
 print(uppercase("lottry"))
 
 # Volume of cylinder
 def cylindervol(radius, height):
-    _pie = math.pi
-    return _pie * math.pow(radius, 2) * height
+    pie = math.pi
+    return pie * math.pow(radius, 2) * height
 
 print(cylindervol(5, 5))
 
 # Keyword Arguments
-def increment(num, _by):
-    return num + _by
+def increment(num, by):
+    return num + by
 
-RESULT = increment(2, 1)
-print(RESULT)
+result = increment(2, 1)
+print(result)
 
 # Default Arguments
 # All optional parameters should come aftr the required parameter
-def incrementeasy(num, _by=1):
-    """Any Dommy string"""
-    return num + _by
+def incrementeasy(num, by=1):
+    return num + by
 
-VALUE1 = incrementeasy(5)
-VALUE2 = incrementeasy(5, 19)
-print(VALUE1)
-print(VALUE2)
+value1 = incrementeasy(5)
+value2 = incrementeasy(5, 19)
+print(value1)
+print(value2)
 
 # REST PARAMETERS
-def multiply(_x,_y):
-    """Any Dommy string"""
-    return _x * _y
+def multiply(x,y):
+    return x * y
 
 print(multiply(7, 2))
 
 # To be able to the issue of mutiple required parameters we do the following
 
 def multiply_more(*numbers):
-    """Any Dommy string"""
     return numbers
 
 print(multiply_more(4, 3, 6, 9, 1, 4))
 
 def multi(*numb):
-    """Any Dommy string"""
     total = 1
     for num in numb:
         total *= num
     return total
+
 print(multi(3, 5, 7, 8, 2))
 
 # working with dictionary
 def save_user(**user):
-    """Any Dommy string"""
     print(user)
 
 save_user(id = 1, name = "Paullycarp", age = 34)
@@ -84,7 +81,7 @@ print(volume(7))
 message = "messeage a"
 
 def greet(name):
-    message = f"messag {name}"
+    message = f"message {name}"
     return message
 
 print(greet("John"))

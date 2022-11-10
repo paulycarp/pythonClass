@@ -1,6 +1,5 @@
 """If you want to print FizzBuss do the following"""
 def fizz_buzz(ouput):
-    """Any dummy string."""
     if ouput % 15 == 0:
         return "FizzBuzz"
     if ouput % 3 == 0:
@@ -9,22 +8,23 @@ def fizz_buzz(ouput):
         return "Buzz"
     return ouput
 
-print(fizz_buzz(45))
+print(fizz_buzz(5))
 
-FIZZ_BUZZ = (input)
-if input % 15 == 0:
-    print("Fizzbuss")
-elif input % 3 == 0:
-    print("Fizz")
-elif input % 5 ==  0:
-    print("Buzz")
-else:
-    print(input)
+def Fizz_Buzz(input):
+    if input % 15 == 0:
+        print("Fizzbuss")
+    elif input % 3 == 0:
+        print("Fizz")
+    elif input % 5 ==  0:
+        print("Buzz")
+    else:
+        print(input)
 
+print(Fizz_Buzz(45))
 
-
-DIGITS = list(range(100))
-print(DIGITS[::2])
+print("\n******** Working with range in for loop ********\n")
+digits = list(range(100))
+print(digits[::2])
 
 for num in range(1, 100, 2):
     add = num + 1

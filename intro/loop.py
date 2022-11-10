@@ -4,13 +4,13 @@
 
 
 for number in range(10):
-    print("TAACODEEP", number)
+    print("taacodeep", number)
 
-TAACODEEP = "The best coding school you can ever attend"
+taacodeep = "The best coding school you can ever attend"
 
-for num in range(1, len(TAACODEEP), 2):
+for num in range(1, len(taacodeep), 2):
     print(num)
-for letters in TAACODEEP:
+for letters in taacodeep:
     print(letters)
 
 # count backwards
@@ -19,13 +19,13 @@ for num in range(100, 0, -10):
 
 # to print triangle
 for triange in range(8):
-    print((triange + 1) * "* ")
+    print((triange + 1) * " *")
 
 # for/else
-SUCCESS = True
+success = True
 for num in range(3):
     print("Attempt..")
-    if SUCCESS:
+    if success:
         print("Successful")
         break
 else:
@@ -37,17 +37,18 @@ for x in range(8):
         print(f"({x}, {y})")
 
 # while loops
-NUM = 300
-while NUM > 0:
-    print(NUM)
+num = 300
+while num > 0:
+    print(num)
     num //= 2 #interger division, it doesn't return decimal places
 
-COMMAND = ""
-while COMMAND.lower() != "end":
-    COMMAND = input(">")
-    print("Say", COMMAND)
+command = ""
+while command.lower() != "end":
+    command = input(">")
+    print("Say", command)
 
 #INFINITE LOOP
+
 while True:
     print("OK")
     break#this helps to breake the loop, else it will continue till infinity
